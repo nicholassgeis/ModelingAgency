@@ -2,7 +2,7 @@ from openpyxl import (load_workbook, Workbook)
 from openpyxl.chart import( ScatterChart, Reference, Series)
 import math
 
-wb = load_workbook('ProblemCData.xlsx')
+wb = load_workbook('AdjustedCData.xlsx')
 
 ## Names for different worksheets
 
@@ -13,7 +13,9 @@ graphs = wb.create_sheet("Graphs")
 
 numberof4s = 0
 
-for k in range(0, 5):
+for k in range(0, 2332):
+
+    print(k)
 
     if (k%4==0):
 
