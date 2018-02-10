@@ -8,7 +8,9 @@ write.csv(both, "merged.csv")
 
 btu_energy_data = subset(both,both$Unit=="Billion Btu" | both$Unit=="Million Btu")
 summary(btu_energy_data)
-write.csv(btu_energy_data, "BtuEnergyData.csv")
+btu_energy_data$Unit<-NULL
+summary(btu_energy_data)
+write.csv(btu_energy_data, "BtuEnergyData.csv",row.names=FALSE)
 
 
 california = subset(seseds,seseds$StateCode=="CA")
