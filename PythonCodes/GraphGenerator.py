@@ -15,8 +15,6 @@ numberof4s = 0
 
 for k in range(0, 2332):
 
-    print(k)
-
     if (k%4==0):
 
         numberof4s+=1
