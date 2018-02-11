@@ -19,18 +19,33 @@ btu_energy_msncodes$Unit<-NULL
 total_btu_energy_data = subset(btu_energy_data,grepl("total",btu_energy_data$Description,ignore.case=TRUE))
 total_btu_energy_msncodes = subset(btu_energy_msncodes,grepl("total",btu_energy_msncodes$Description,ignore.case=TRUE))
 
-write.csv(total_btu_energy_data, "TotalBtuEnergyData.csv",row.names=FALSE)
-write.csv(total_btu_energy_msncodes, "TotalBtuEnergyData_msn.csv",row.names=FALSE)
-
-tfc_data = subset(total_btu_energy_data,grepl("^.*.*TCB$",total_btu_energy_data$MSN,ignore.case=TRUE))
-tfc_msncodes = subset(total_btu_energy_msncodes,grepl( "^.*.*TCB$",total_btu_energy_msncodes$MSN,ignore.case=TRUE))
+tfc_data = subset(total_btu_energy_data,grepl("^.*.*TXB$",total_btu_energy_data$MSN,ignore.case=TRUE))
+tfc_msncodes = subset(total_btu_energy_msncodes,grepl( "^.*.*TXB$",total_btu_energy_msncodes$MSN,ignore.case=TRUE))
 tpes_data = subset(total_btu_energy_data,grepl( "^.*.*TCB$",total_btu_energy_data$MSN,ignore.case=TRUE))
 tpes_msncodes = subset(total_btu_energy_msncodes,grepl("^.*.*TCB$",total_btu_energy_msncodes$MSN,ignore.case=TRUE))
+
+summary(tpes_data2)
+summary(tpes_msncodes2)
 
 write.csv(tfc_data, "TotalFinalConsumption.csv",row.names=FALSE)
 write.csv(tfc_msncodes, "TotalFinalConsumption_msn.csv",row.names=FALSE)
 write.csv(tpes_data, "TotalPrimaryEnergySupply.csv",row.names=FALSE)
 write.csv(tpes_msncodes, "TotalPrimaryEnergySupply_msn.csv",row.names=FALSE)
+##########################################################################################################################
+#BROKEN
+totals <- data.frame(tfc_msncodes$MSN,tpes_data,tfc_data)
+summary(totals)
+for (code in tfc_msncodes$MSN){
+  tpes_data2[grepl(gsub("X", "C", code),tpes_data$MSN)]
+  tpes_msncodes2[grepl(gsub("X", "C", code),tpes_msncodes$MSN,value=TRUE)]
+}
+
+write.csv(tfc_data, "TotalFinalConsumption.csv",row.names=FALSE)
+write.csv(tfc_msncodes, "TotalFinalConsumption_msn.csv",row.names=FALSE)
+write.csv(tpes_data2, "TotalPrimaryEnergySupply.csv",row.names=FALSE)
+write.csv(tpes_msncodes2, "TotalPrimaryEnergySupply_msn.csv",row.names=FALSE)
+##################################################################################################################################
+
 
 btu_energy_data$Renewable<-NA
 btu_energy_msncodes$Renewable<-NA
