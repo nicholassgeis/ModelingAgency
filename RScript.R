@@ -20,19 +20,15 @@ total_btu_energy_msncodes = subset(btu_energy_msncodes,grepl("total",btu_energy_
 write.csv(total_btu_energy_data, "TotalBtuEnergyData.csv",row.names=FALSE)
 write.csv(total_btu_energy_msncodes, "TotalBtuEnergyData_msn.csv",row.names=FALSE)
 
-tfc_data = subset(total_btu_energy_data,grepl( "^\\[^T]+.*TXB$",total_btu_energy_data$MSN,ignore.case=TRUE))
-tfc_msncodes = subset(total_btu_energy_msncodes,grepl( "^\\[^T]+.*TXB$",total_btu_energy_msncodes$MSN,ignore.case=TRUE))
-tpes_data = subset(total_btu_energy_data,grepl( "^\\[^T]+.*TCB$",total_btu_energy_data$MSN,ignore.case=TRUE))
-tpes_msncodes = subset(total_btu_energy_msncodes,grepl( "^\\[^T]+.*TCB$",total_btu_energy_msncodes$MSN,ignore.case=TRUE))
-
-glob2rx("[^T]+*TCB")
-
-summary(tfc_msncodes)
-summary(tpes_msncodes)
-
+tfc_data = subset(total_btu_energy_data,grepl("^.*.*TCB$",total_btu_energy_data$MSN,ignore.case=TRUE))
+tfc_msncodes = subset(total_btu_energy_msncodes,grepl( "^.*.*TCB$",total_btu_energy_msncodes$MSN,ignore.case=TRUE))
+tpes_data = subset(total_btu_energy_data,grepl( "^.*.*TCB$",total_btu_energy_data$MSN,ignore.case=TRUE))
+tpes_msncodes = subset(total_btu_energy_msncodes,grepl("^.*.*TCB$",total_btu_energy_msncodes$MSN,ignore.case=TRUE))
 
 write.csv(tfc_data, "TotalFinalConsumption.csv",row.names=FALSE)
 write.csv(tfc_msncodes, "TotalFinalConsumption_msn.csv",row.names=FALSE)
+write.csv(tpes_data, "TotalPrimaryEnergySupply.csv",row.names=FALSE)
+write.csv(tpes_msncodes, "TotalPrimaryEnergySupply_msn.csv",row.names=FALSE)
 
 btu_energy_data$Renewable<-NA
 btu_energy_msncodes$Renewable<-NA
