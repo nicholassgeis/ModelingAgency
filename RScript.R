@@ -2,10 +2,12 @@ install.packages("readxl")
 install.packages("plyr")
 library(readxl)
 library(plyr)
+
 #rm(list=ls()) 
 
-seseds = read_excel("/Users/rdcarini/Documents/Projects/modeling/ModelingAgency/PythonCodes/AdjustedCData.xlsx", sheet = "seseds")
-msncodes = read_excel("/Users/rdcarini/Documents/Projects/modeling/ModelingAgency/PythonCodes/AdjustedCData.xlsx", sheet = "msncodes")
+path = "/Users/rdcarini/Documents/Projects/modeling/"
+seseds = read_excel(paste(path,"ModelingAgency/PythonCodes/AdjustedCData.xlsx",sep=""), sheet = "seseds")
+msncodes = read_excel(paste(path,"ModelingAgency/PythonCodes/AdjustedCData.xlsx",sep=""), sheet = "msncodes")
 
 ###########################################################################################
 both = join(seseds,msncodes)
@@ -49,8 +51,8 @@ for (word in dictRenewable){
   btu_energy_msncodes$Renewable[grepl(word,btu_energy_msncodes$Description)]<-"TRUE"
 }
 
-write.csv(btu_energy_data, "RenewableEnergyData_FIXME.csv",row.names=FALSE)
-write.csv(btu_energy_msncodes, "RenewableEnergyDataMSN_FIXME.csv",row.names=FALSE)
+write.csv(btu_energy_data, paste(path,"RenewableEnergyData_FIXME.csv",sep=""),row.names=FALSE)
+write.csv(btu_energy_msncodes, paste(path,"RenewableEnergyDataMSN_FIXME.csv",sep=""),row.names=FALSE)
 #############################################################################
 
 california = subset(btu_energy_data,btu_energy_data$StateCode=="CA")
