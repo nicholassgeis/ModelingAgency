@@ -1,8 +1,8 @@
 install.packages("readxl")
 install.packages("plyr")
-
 library(readxl)
 library(plyr)
+#rm(list=ls()) 
 
 seseds = read_excel("/Users/rdcarini/Documents/Projects/modeling/ModelingAgency/PythonCodes/AdjustedCData.xlsx", sheet = "seseds")
 msncodes = read_excel("/Users/rdcarini/Documents/Projects/modeling/ModelingAgency/PythonCodes/AdjustedCData.xlsx", sheet = "msncodes")
@@ -10,11 +10,29 @@ msncodes = read_excel("/Users/rdcarini/Documents/Projects/modeling/ModelingAgenc
 ###########################################################################################
 both = join(seseds,msncodes)
 
-btu_energy_data = subset(both,both$Unit=="Billion Btu" | both$Unit=="Million Btu")
-btu_energy_msncodes = subset(msncodes,msncodes$Unit=="Billion Btu" | msncodes$Unit=="Million Btu")
-
+btu_energy_data = subset(both,both$Unit=="Billion Btu")
+btu_energy_msncodes = subset(msncodes,msncodes$Unit=="Billion Btu")
 btu_energy_data$Unit<-NULL
-summary(btu_energy_msncodes)
+btu_energy_msncodes$Unit<-NULL
+total_btu_energy_data = subset(btu_energy_data,grepl("total",btu_energy_data$Description,ignore.case=TRUE))
+total_btu_energy_msncodes = subset(btu_energy_msncodes,grepl("total",btu_energy_msncodes$Description,ignore.case=TRUE))
+
+write.csv(total_btu_energy_data, "TotalBtuEnergyData.csv",row.names=FALSE)
+write.csv(total_btu_energy_msncodes, "TotalBtuEnergyData_msn.csv",row.names=FALSE)
+
+tfc_data = subset(total_btu_energy_data,grepl( "^\\[^T]+.*TXB$",total_btu_energy_data$MSN,ignore.case=TRUE))
+tfc_msncodes = subset(total_btu_energy_msncodes,grepl( "^\\[^T]+.*TXB$",total_btu_energy_msncodes$MSN,ignore.case=TRUE))
+tpes_data = subset(total_btu_energy_data,grepl( "^\\[^T]+.*TCB$",total_btu_energy_data$MSN,ignore.case=TRUE))
+tpes_msncodes = subset(total_btu_energy_msncodes,grepl( "^\\[^T]+.*TCB$",total_btu_energy_msncodes$MSN,ignore.case=TRUE))
+
+glob2rx("[^T]+*TCB")
+
+summary(tfc_msncodes)
+summary(tpes_msncodes)
+
+
+write.csv(tfc_data, "TotalFinalConsumption.csv",row.names=FALSE)
+write.csv(tfc_msncodes, "TotalFinalConsumption_msn.csv",row.names=FALSE)
 
 btu_energy_data$Renewable<-NA
 btu_energy_msncodes$Renewable<-NA
