@@ -11,6 +11,10 @@ msncodes = read_excel(paste(path,"ModelingAgency/PythonCodes/AdjustedCData.xlsx"
 
 ###########################################################################################
 both = join(seseds,msncodes)
+summary(both)
+money_data <- both[grep("dollars", both$Unit, ignore.case=TRUE),]
+summary(money_data)
+write.csv(money_data, "Money.csv",row.names=FALSE)
 
 btu_energy_data = subset(both,both$Unit=="Billion Btu")
 btu_energy_msncodes = subset(msncodes,msncodes$Unit=="Billion Btu")
