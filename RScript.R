@@ -10,8 +10,48 @@ seseds = read_excel(paste(path,"ModelingAgency/PythonCodes/AdjustedCData.xlsx",s
 msncodes = read_excel(paste(path,"ModelingAgency/PythonCodes/AdjustedCData.xlsx",sep=""), sheet = "msncodes")
 
 ###########################################################################################
+
 both = join(seseds,msncodes)
 summary(both)
+
+data2009 <- subset(both,both$Year=="2009")
+data2009$Year<-NULL
+summary(data2009)
+
+coal_data2009 <- data2009[grep("coal", data2009$Description, ignore.case=TRUE),]
+nattygas_data2009 <- data2009[grep("natural gas", data2009$Description, ignore.case=TRUE),]
+motor_data2009 <- data2009[grep("motor", data2009$Description, ignore.case=TRUE),]
+distillate_data2009 <- data2009[grep("distillate", data2009$Description, ignore.case=TRUE),]
+lpg_data2009 <- data2009[grep("lpg", data2009$Description, ignore.case=TRUE),]
+residual_data2009 <- data2009[grep("residual", data2009$Description, ignore.case=TRUE),]
+petroleum_data2009 <- data2009[grep("other petroleum", data2009$Description, ignore.case=TRUE),]
+nuclear_data2009 <- data2009[grep("nuclear", data2009$Description, ignore.case=TRUE),]
+hydroelectric_data2009 <- data2009[grep("hydroelectric", data2009$Description, ignore.case=TRUE),]
+biomass_data2009 <- data2009[grep("biomass", data2009$Description, ignore.case=TRUE),]
+geothermal_data2009 <- data2009[grep("geothermal", data2009$Description, ignore.case=TRUE),]
+interstate_data2009 <- data2009[grep("net interstate", data2009$Description, ignore.case=TRUE),]
+jet_data2009 <- data2009[grep("jet", data2009$Description, ignore.case=TRUE),]
+totals20091 <- subset(data2009,grepl(glob2rx("T****"),data2009$MSN,ignore.case=TRUE))
+totals20092 <- data2009[grep("renewable", data2009$Description, ignore.case=TRUE),]
+totals2009 <- rbind(totals20091, totals20092)
+
+write.csv(coal_data2009, "coal2009.csv",row.names=FALSE)
+write.csv(nattygas_data2009, "natgas2009.csv",row.names=FALSE)
+write.csv(motor_data2009, "motorGas2009.csv",row.names=FALSE)
+write.csv(distillate_data2009, "distillate2009.csv",row.names=FALSE)
+write.csv(lpg_data2009, "lpg2009.csv",row.names=FALSE)
+write.csv(residual_data2009, "residualFuel2009.csv",row.names=FALSE)
+write.csv(petroleum_data2009, "petroleum2009.csv",row.names=FALSE)
+write.csv(nuclear_data2009, "nuclear2009.csv",row.names=FALSE)
+write.csv(hydroelectric_data2009, "hydroelectric2009.csv",row.names=FALSE)
+write.csv(biomass_data2009, "biomass2009.csv",row.names=FALSE)
+write.csv(geothermal_data2009, "geothermal2009.csv",row.names=FALSE)
+write.csv(interstate_data2009, "netInterstate2009.csv",row.names=FALSE)
+write.csv(jet_data2009, "jetFuel2009.csv",row.names=FALSE)
+write.csv(totals2009, "totals2009.csv",row.names=FALSE)
+
+#hydroelectric, geothermal, 
+
 money_data <- both[grep("dollars", both$Unit, ignore.case=TRUE),]
 summary(money_data)
 write.csv(money_data, "Money.csv",row.names=FALSE)
