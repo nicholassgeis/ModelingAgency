@@ -11,8 +11,8 @@ def tex(file,x,y):
     s="\\begin{tabular}\n"
     for j in range(1,x+1):
         for i in range(1,y):
-            s+=str(ws.cell(j,i).value)+" & "
-        s+=str(ws.cell(j,y).value)+" \\\\ \n"
+            s+=nonone(str(ws.cell(j,i).value))+" & "
+        s+=nonone(str(ws.cell(j,y).value))+" \\\\ \n"
     s+="\\end{tabular}"
     return(s)
 
