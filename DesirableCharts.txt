@@ -1,0 +1,20 @@
+Energy types:
+*coal
+*natural gas
+*motor gas \ ethanol
+*distillate fuel oil
+*jet fuel
+*lpg
+*residual fuel
+*other petroleum
+*nuclear electric power
+*hydroelectric power
+*biomass
+*geothermal
+*net interstate flow
+
+Find MSN for:
+-Total production for each type of energy
+-Average price for each type of energy
+-End state production for each type of energy
+-Total expenditures for each type of energy
