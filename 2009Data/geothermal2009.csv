@@ -1,37 +1,1 @@
-"MSN","StateCode","Data","Description","Unit"
-"GECCB","AZ",41.81065,"Direct use of geothermal energy and heat pumps in the commercial sector.","Billion Btu"
-"GECCB","CA",551.90053,"Direct use of geothermal energy and heat pumps in the commercial sector.","Billion Btu"
-"GECCB","NM",62.71597,"Direct use of geothermal energy and heat pumps in the commercial sector.","Billion Btu"
-"GECCB","TX",698.89004,"Direct use of geothermal energy and heat pumps in the commercial sector.","Billion Btu"
-"GEEGB","AZ",0,"Electricity produced from geothermal energy by the electric power sector.","Billion Btu"
-"GEEGB","CA",125443.1621,"Electricity produced from geothermal energy by the electric power sector.","Billion Btu"
-"GEEGB","NM",0,"Electricity produced from geothermal energy by the electric power sector.","Billion Btu"
-"GEEGB","TX",0,"Electricity produced from geothermal energy by the electric power sector.","Billion Btu"
-"GEEGP","AZ",0,"Electricity produced from geothermal energy by the electric power sector.","Million kilowatthours"
-"GEEGP","CA",12852.783,"Electricity produced from geothermal energy by the electric power sector.","Million kilowatthours"
-"GEEGP","NM",0,"Electricity produced from geothermal energy by the electric power sector.","Million kilowatthours"
-"GEEGP","TX",0,"Electricity produced from geothermal energy by the electric power sector.","Million kilowatthours"
-"GEICB","AZ",243.70798,"Direct use of geothermal energy and heat pumps in the industrial sector.","Billion Btu"
-"GEICB","CA",1200.70763,"Direct use of geothermal energy and heat pumps in the industrial sector.","Billion Btu"
-"GEICB","NM",237.76389,"Direct use of geothermal energy and heat pumps in the industrial sector.","Billion Btu"
-"GEICB","TX",0,"Direct use of geothermal energy and heat pumps in the industrial sector.","Billion Btu"
-"GERCB","AZ",43.57999,"Direct use of geothermal energy and heat pumps in the residential sector.","Billion Btu"
-"GERCB","CA",265.3503,"Direct use of geothermal energy and heat pumps in the residential sector.","Billion Btu"
-"GERCB","NM",16.58716,"Direct use of geothermal energy and heat pumps in the residential sector.","Billion Btu"
-"GERCB","TX",1358.13442,"Direct use of geothermal energy and heat pumps in the residential sector.","Billion Btu"
-"GETCB","AZ",329.09862,"Geothermal energy total consumption.","Billion Btu"
-"GETCB","CA",127461.1205,"Geothermal energy total consumption.","Billion Btu"
-"GETCB","NM",317.06702,"Geothermal energy total consumption.","Billion Btu"
-"GETCB","TX",2057.02446,"Geothermal energy total consumption.","Billion Btu"
-"GETXB","AZ",329.09862,"Geothermal total end-use consumption.","Billion Btu"
-"GETXB","CA",2017.95846,"Geothermal total end-use consumption.","Billion Btu"
-"GETXB","NM",317.06702,"Geothermal total end-use consumption.","Billion Btu"
-"GETXB","TX",2057.02446,"Geothermal total end-use consumption.","Billion Btu"
-"GOCCB","AZ",41.81065,"Geothermal energy and hydroelectricity consumed in the commercial sector.","Billion Btu"
-"GOCCB","CA",555.11811,"Geothermal energy and hydroelectricity consumed in the commercial sector.","Billion Btu"
-"GOCCB","NM",62.71597,"Geothermal energy and hydroelectricity consumed in the commercial sector.","Billion Btu"
-"GOCCB","TX",698.89004,"Geothermal energy and hydroelectricity consumed in the commercial sector.","Billion Btu"
-"GORCB","AZ",4637.65202,"Geothermal and solar energy consumed in the residential sector.","Billion Btu"
-"GORCB","CA",25343.83362,"Geothermal and solar energy consumed in the residential sector.","Billion Btu"
-"GORCB","NM",299.11417,"Geothermal and solar energy consumed in the residential sector.","Billion Btu"
-"GORCB","TX",2177.89564,"Geothermal and solar energy consumed in the residential sector.","Billion Btu"
+MSN,StateCode,Data,Description,UnitGECCB,AZ,41.81065,Direct use of geothermal energy and heat pumps in the commercial sector.,Billion BtuGECCB,CA,551.90053,Direct use of geothermal energy and heat pumps in the commercial sector.,Billion BtuGECCB,NM,62.71597,Direct use of geothermal energy and heat pumps in the commercial sector.,Billion BtuGECCB,TX,698.89004,Direct use of geothermal energy and heat pumps in the commercial sector.,Billion BtuGEEGB,AZ,0,Electricity produced from geothermal energy by the electric power sector.,Billion BtuGEEGB,CA,125443.1621,Electricity produced from geothermal energy by the electric power sector.,Billion BtuGEEGB,NM,0,Electricity produced from geothermal energy by the electric power sector.,Billion BtuGEEGB,TX,0,Electricity produced from geothermal energy by the electric power sector.,Billion BtuGEEGP,AZ,0,Electricity produced from geothermal energy by the electric power sector.,Million kilowatthoursGEEGP,CA,12852.783,Electricity produced from geothermal energy by the electric power sector.,Million kilowatthoursGEEGP,NM,0,Electricity produced from geothermal energy by the electric power sector.,Million kilowatthoursGEEGP,TX,0,Electricity produced from geothermal energy by the electric power sector.,Million kilowatthoursGEICB,AZ,243.70798,Direct use of geothermal energy and heat pumps in the industrial sector.,Billion BtuGEICB,CA,1200.70763,Direct use of geothermal energy and heat pumps in the industrial sector.,Billion BtuGEICB,NM,237.76389,Direct use of geothermal energy and heat pumps in the industrial sector.,Billion BtuGEICB,TX,0,Direct use of geothermal energy and heat pumps in the industrial sector.,Billion BtuGERCB,AZ,43.57999,Direct use of geothermal energy and heat pumps in the residential sector.,Billion BtuGERCB,CA,265.3503,Direct use of geothermal energy and heat pumps in the residential sector.,Billion BtuGERCB,NM,16.58716,Direct use of geothermal energy and heat pumps in the residential sector.,Billion BtuGERCB,TX,1358.13442,Direct use of geothermal energy and heat pumps in the residential sector.,Billion BtuGETCB,AZ,329.09862,Geothermal energy total consumption.,Billion BtuGETCB,CA,127461.1205,Geothermal energy total consumption.,Billion BtuGETCB,NM,317.06702,Geothermal energy total consumption.,Billion BtuGETCB,TX,2057.02446,Geothermal energy total consumption.,Billion BtuGETXB,AZ,329.09862,Geothermal total end-use consumption.,Billion BtuGETXB,CA,2017.95846,Geothermal total end-use consumption.,Billion BtuGETXB,NM,317.06702,Geothermal total end-use consumption.,Billion BtuGETXB,TX,2057.02446,Geothermal total end-use consumption.,Billion BtuGOCCB,AZ,41.81065,Geothermal energy and hydroelectricity consumed in the commercial sector.,Billion BtuGOCCB,CA,555.11811,Geothermal energy and hydroelectricity consumed in the commercial sector.,Billion BtuGOCCB,NM,62.71597,Geothermal energy and hydroelectricity consumed in the commercial sector.,Billion BtuGOCCB,TX,698.89004,Geothermal energy and hydroelectricity consumed in the commercial sector.,Billion BtuGORCB,AZ,4637.65202,Geothermal and solar energy consumed in the residential sector.,Billion BtuGORCB,CA,25343.83362,Geothermal and solar energy consumed in the residential sector.,Billion BtuGORCB,NM,299.11417,Geothermal and solar energy consumed in the residential sector.,Billion BtuGORCB,TX,2177.89564,Geothermal and solar energy consumed in the residential sector.,Billion Btu
