@@ -15,5 +15,3 @@ def tex(file,x,y):
         s+=nonone(str(ws.cell(j,y).value))+" \\\\ \n"
     s+="\\end{tabular}"
     return(s)
-
-print(tex("ProblemCData.xlsx",10,4))
